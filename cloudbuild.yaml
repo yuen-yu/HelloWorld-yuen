@@ -11,8 +11,8 @@ images: ['australia-southeast-2-docker.pkg.dev/helloworld-yuen/yuen-docker-repos
   - 'deploy'
   - 'helloworldservice'
   - '--image'
-  - 'gcr.io/helloworld-yuen/helloworldservice'
+  - 'gcr.io/helloworld-yuen/helloworldservice:$COMMIT_SHA'
   - '--region'
   - 'australia-southeast-2'
 images:
-  - 'gcr.io/helloworld-yuen/helloworldservice'
+  - 'gcr.io/helloworld-yuen/helloworldservice:$COMMIT_SHA'
