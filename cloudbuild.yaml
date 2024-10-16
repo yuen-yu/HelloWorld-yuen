@@ -16,4 +16,3 @@ images: ['australia-southeast-2-docker.pkg.dev/helloworld-yuen/yuen-docker-repos
   - 'australia-southeast-2'
 images:
   - 'gcr.io/helloworld-yuen/helloworld-yuen.:$COMMIT_SHA'
-.40
