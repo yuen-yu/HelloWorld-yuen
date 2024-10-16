@@ -9,10 +9,11 @@ images: ['australia-southeast-2-docker.pkg.dev/helloworld-yuen/yuen-docker-repos
   args:
   - 'run'
   - 'deploy'
-  - 'helloworldservice'
+  - 'helloworld-yuen'
   - '--image'
-  - 'gcr.io/helloworld-yuen/helloworldservice:$COMMIT_SHA'
+  - 'gcr.io/helloworld-yuen/helloworld-yuen.:$COMMIT_SHA'
   - '--region'
   - 'australia-southeast-2'
 images:
-  - 'gcr.io/helloworld-yuen/helloworldservice:$COMMIT_SHA'
+  - 'gcr.io/helloworld-yuen/helloworld-yuen.:$COMMIT_SHA'
+.40
