@@ -1,6 +1,8 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'australia-southeast-2-docker.pkg.dev/helloworld-yuen/yuen-docker-repository/helloworldyuen-image', '.']
+ options:
+  logging: CLOUD_LOGGING_ONLY6. 
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'australia-southeast-2-docker.pkg.dev/helloworld-yuen/yuen-docker-repository/helloworldyuen-image']
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
