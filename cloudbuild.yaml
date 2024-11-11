@@ -15,5 +15,5 @@ steps:
   - 'australia-southeast-2'
 images:
   - 'gcr.io/helloworld-yuen/yuen-docker-repository/helloworldyuen-image'
-optiions:
+options:
   logging: CLOUD_LOGGING_ONLY
