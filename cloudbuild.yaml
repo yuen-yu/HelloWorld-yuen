@@ -1,19 +1,7 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'australia-southeast-2-docker.pkg.dev/helloworld-yuen/yuen-docker-repository/helloworldyuen-image', '.']
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'australia-southeast-2-docker.pkg.dev/helloworld-yuen/yuen-docker-repository/helloworldyuen-image']
-- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-  entrypoint: gcloud
-  args:
-  - 'run'
-  - 'deploy'
-  - 'yuen-docker-repository'
-  - '--image'
-  - 'gcr.io/helloworld-yuen/yuen-docker-repository/helloworldyuen-image'
-  - '--region'
-  - 'australia-southeast-2'
+  script: |
+    docker build -t australia-southeast-2-docker.pkg.dev/helloworld-yuen/yuen-docker-repository/helloworldyuen-image:tag1 .
+  automapSubstitutions: true
 images:
-  - 'gcr.io/helloworld-yuen/yuen-docker-repository/helloworldyuen-image'
-options:
-  logging: CLOUD_LOGGING_ONLY
+- 'australia-southeast-2-docker.pkg.dev/helloworld-yuen/yuen-docker-repository/helloworldyuen-image:tag1'
