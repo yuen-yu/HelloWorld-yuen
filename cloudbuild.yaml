@@ -1,7 +1,3 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  script: |
-    docker build -t australia-southeast-2-docker.pkg.dev/helloworld-yuen/yuen-docker-repository/helloworldyuen-image:tag1 .
-  automapSubstitutions: true
-images:
-- 'australia-southeast-2-docker.pkg.dev/helloworld-yuen/yuen-docker-repository/helloworldyuen-image:tag1'
+  args: ['build', '-t', 'australia-southeast-2-docker.pkg.dev/helloworld-yuen/yuen-docker-repository/helloworldyuen-image', '.']
